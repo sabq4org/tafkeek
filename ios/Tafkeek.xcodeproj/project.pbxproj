@@ -1,0 +1,343 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0799B0FF973F31B725B999E0 /* StoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF3B715EF63204E7C2AAC31 /* StoryView.swift */; };
+		2F59B3F8025C895D0E888DB1 /* TafkeekApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD44355BB4BCF87DAB74A94 /* TafkeekApp.swift */; };
+		486A02617F4481A3F6472D74 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712467EFC30F101722F36DB1 /* APIClient.swift */; };
+		9B9F17604E567565D3A9C6A7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADBEB363179406358FF8CA7 /* ContentView.swift */; };
+		C2BE05C444E0DABFF3827790 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F3D7D5C3BB0EA44727CCCEF /* Assets.xcassets */; };
+		EA42270637DEA7231F257EC3 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FDC38420736424E64573C1 /* AppModel.swift */; };
+		F01CF75A43704280CDF674BD /* Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C890202AD0DDD08AF1E7196 /* Support.swift */; };
+		F9FE482AB6BDAA7BD39E4C8D /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001A00BBBAFFAC3355801744 /* Models.swift */; };
+		FD4F85EE98296DBD3C342814 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9449C5ACE2472295F1F9458 /* HomeView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		001A00BBBAFFAC3355801744 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		1CF3B715EF63204E7C2AAC31 /* StoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryView.swift; sourceTree = "<group>"; };
+		242F52C017B4D3A585A2DF1F /* Tafkeek.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Tafkeek.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C890202AD0DDD08AF1E7196 /* Support.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Support.swift; sourceTree = "<group>"; };
+		56FDC38420736424E64573C1 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		5AD44355BB4BCF87DAB74A94 /* TafkeekApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TafkeekApp.swift; sourceTree = "<group>"; };
+		712467EFC30F101722F36DB1 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		7ADBEB363179406358FF8CA7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7F3D7D5C3BB0EA44727CCCEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D9449C5ACE2472295F1F9458 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		802129BBE61EB2F51C98C2E4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				242F52C017B4D3A585A2DF1F /* Tafkeek.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B3E23749ED46B7A9C97CB6A1 /* Tafkeek */ = {
+			isa = PBXGroup;
+			children = (
+				712467EFC30F101722F36DB1 /* APIClient.swift */,
+				56FDC38420736424E64573C1 /* AppModel.swift */,
+				7F3D7D5C3BB0EA44727CCCEF /* Assets.xcassets */,
+				7ADBEB363179406358FF8CA7 /* ContentView.swift */,
+				D9449C5ACE2472295F1F9458 /* HomeView.swift */,
+				001A00BBBAFFAC3355801744 /* Models.swift */,
+				1CF3B715EF63204E7C2AAC31 /* StoryView.swift */,
+				2C890202AD0DDD08AF1E7196 /* Support.swift */,
+				5AD44355BB4BCF87DAB74A94 /* TafkeekApp.swift */,
+			);
+			path = Tafkeek;
+			sourceTree = "<group>";
+		};
+		E5C84EA448148EB8A264286D = {
+			isa = PBXGroup;
+			children = (
+				B3E23749ED46B7A9C97CB6A1 /* Tafkeek */,
+				802129BBE61EB2F51C98C2E4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5C4183D6817FE0AF5D6F118B /* Tafkeek */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBE61D7276EF7145CF9AD9FA /* Build configuration list for PBXNativeTarget "Tafkeek" */;
+			buildPhases = (
+				0CE978583C56ECED30927BD3 /* Sources */,
+				0F2BEA43A2DB880F562A3E67 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tafkeek;
+			packageProductDependencies = (
+			);
+			productName = Tafkeek;
+			productReference = 242F52C017B4D3A585A2DF1F /* Tafkeek.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		49B9A0D80040A67E8F95762F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					5C4183D6817FE0AF5D6F118B = {
+						DevelopmentTeam = CBU7MJEC5R;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 24046233F8DB2976A4482F12 /* Build configuration list for PBXProject "Tafkeek" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = E5C84EA448148EB8A264286D;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 802129BBE61EB2F51C98C2E4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5C4183D6817FE0AF5D6F118B /* Tafkeek */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0F2BEA43A2DB880F562A3E67 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2BE05C444E0DABFF3827790 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0CE978583C56ECED30927BD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				486A02617F4481A3F6472D74 /* APIClient.swift in Sources */,
+				EA42270637DEA7231F257EC3 /* AppModel.swift in Sources */,
+				9B9F17604E567565D3A9C6A7 /* ContentView.swift in Sources */,
+				FD4F85EE98296DBD3C342814 /* HomeView.swift in Sources */,
+				F9FE482AB6BDAA7BD39E4C8D /* Models.swift in Sources */,
+				0799B0FF973F31B725B999E0 /* StoryView.swift in Sources */,
+				F01CF75A43704280CDF674BD /* Support.swift in Sources */,
+				2F59B3F8025C895D0E888DB1 /* TafkeekApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		54D865ADCCD421A3119A18E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		77B0EDF85152B7C296939341 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CBU7MJEC5R;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Tafkeek/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tafkeek.app;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		CDEB342168375CA378D06543 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CBU7MJEC5R;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Tafkeek/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tafkeek.app;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		D098D4FE617C232127306F25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		24046233F8DB2976A4482F12 /* Build configuration list for PBXProject "Tafkeek" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D098D4FE617C232127306F25 /* Debug */,
+				54D865ADCCD421A3119A18E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		DBE61D7276EF7145CF9AD9FA /* Build configuration list for PBXNativeTarget "Tafkeek" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDEB342168375CA378D06543 /* Debug */,
+				77B0EDF85152B7C296939341 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 49B9A0D80040A67E8F95762F /* Project object */;
+}

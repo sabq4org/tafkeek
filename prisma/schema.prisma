@@ -1,0 +1,101 @@
+// قاعدة بيانات "تفكيك" — تحفظ عمليات البحث والشروح والمخططات.
+// المزود: PostgreSQL (Neon عبر Vercel Marketplace).
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["postgresqlExtensions"]
+}
+
+datasource db {
+  provider   = "postgresql"
+  url        = env("DATABASE_URL")
+  extensions = [pgvector(map: "vector")] // للبحث الدلالي (اختياري)
+}
+
+enum Level {
+  child
+  student
+  expert
+}
+
+enum SearchStatus {
+  pending
+  completed
+  failed
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String?  @unique
+  createdAt DateTime @default(now())
+  searches  Search[]
+}
+
+// كل عملية بحث يقوم بها المستخدم
+model Search {
+  id              String        @id @default(cuid())
+  rawQuery        String // النص كما كتبه المستخدم
+  normalizedQuery String // نص موحّد للبحث/إزالة التكرار
+  level           Level         @default(student)
+  status          SearchStatus  @default(pending)
+  userId          String?
+  user            User?         @relation(fields: [userId], references: [id])
+  explanation     Explanation?
+  createdAt       DateTime      @default(now())
+
+  @@index([normalizedQuery])
+  @@index([createdAt])
+}
+
+// نتيجة الشرح المُولّدة (Structured JSON)
+model Explanation {
+  id               String           @id @default(cuid())
+  search           Search           @relation(fields: [searchId], references: [id], onDelete: Cascade)
+  searchId         String           @unique
+  topic            String
+  level            Level
+  summary          String
+  steps            Json // [{ order, title, detail }]
+  relatedQuestions Json // string[]
+  imagePrompt      String
+  model            String // اسم النموذج المستخدم
+  createdAt        DateTime         @default(now())
+  diagram          Diagram?
+  images           GeneratedImage[]
+}
+
+// المخطط التقني (يُرسم برمجياً كـ SVG في الواجهة)
+model Diagram {
+  id            String      @id @default(cuid())
+  explanation   Explanation @relation(fields: [explanationId], references: [id], onDelete: Cascade)
+  explanationId String      @unique
+  title         String
+  direction     String // 'TB' | 'RL'
+  nodes         Json // [{ id, label }]
+  edges         Json // [{ from, to, label? }]
+  createdAt     DateTime    @default(now())
+}
+
+// الصور التوضيحية المُولّدة (تُخزّن على Vercel Blob مثلاً)
+model GeneratedImage {
+  id            String      @id @default(cuid())
+  explanation   Explanation @relation(fields: [explanationId], references: [id], onDelete: Cascade)
+  explanationId String
+  url           String
+  prompt        String
+  provider      String // 'flux' | 'fal' ...
+  createdAt     DateTime    @default(now())
+
+  @@index([explanationId])
+}
+
+// ذاكرة دلالية لإزالة تكرار الأسئلة المتشابهة واقتراح الأسئلة المتعلقة.
+// تتطلب امتداد pgvector. أبعاد المتجه تعتمد على نموذج التضمين المستخدم.
+model TopicCache {
+  id              String                       @id @default(cuid())
+  normalizedQuery String                       @unique
+  topic           String
+  embedding       Unsupported("vector(1536)")?
+  hitCount        Int                          @default(1)
+  createdAt       DateTime                     @default(now())
+}
