@@ -9,7 +9,7 @@
 const MODEL = 'gemini-3-pro-image-preview';
 
 const BASE_STYLE =
-  '. Clean, detailed technical educational illustration; soft colors; plain light background; easy to understand at a glance. Absolutely NO text, NO letters, NO numbers, NO captions, NO labels anywhere in the image.';
+  '. Clean, detailed technical educational illustration; soft colors; plain light background; scientifically accurate and faithful to how the real thing actually works; the relevant part must be the clear focal point; easy to understand at a glance. Absolutely NO text, NO letters, NO numbers, NO captions, NO labels anywhere in the image.';
 
 type GeminiPart =
   | { text: string }
@@ -37,7 +37,9 @@ export async function generateIllustration(
     if (ref) {
       parts.push({ inlineData: ref });
       text =
-        'Keep the EXACT same main subject as the provided reference image — identical object, same design, colors, proportions and art style. Now illustrate this specific stage of how it works: ' +
+        'Use the provided reference image ONLY for visual consistency: keep the same art style, color palette, lighting and material look. ' +
+        'Do NOT simply redraw the whole subject. Instead, illustrate THIS SPECIFIC STAGE and focus tightly on the part it describes — zoom in, crop, or cutaway as needed so the change in this stage is the clear focal point, while unrelated parts may be dimmed, simplified, or out of frame. ' +
+        'This stage: ' +
         prompt;
     }
   }

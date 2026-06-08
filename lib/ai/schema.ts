@@ -40,7 +40,7 @@ export const stepSchema = z.object({
   visual: z
     .string()
     .describe(
-      'وصف إنجليزي مختصر وملموس لمشهد يصوّر هذه الخطوة تحديداً (المكوّنات وما الذي يحدث)، بدون أي نص في الصورة',
+      'English description of a CLOSE-UP scene that isolates ONLY the specific part/region active in THIS step, showing the change/motion happening right now. Must DIFFER clearly from other steps: name the exact component in focus, dim or omit unrelated parts, and use words like "close-up of", "cutaway showing", "zoom into", "cross-section of". Do NOT describe the whole object again. No text in the image.',
     ),
 });
 
