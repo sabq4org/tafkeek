@@ -21,7 +21,7 @@
 /* Begin PBXFileReference section */
 		001A00BBBAFFAC3355801744 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		1CF3B715EF63204E7C2AAC31 /* StoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryView.swift; sourceTree = "<group>"; };
-		242F52C017B4D3A585A2DF1F /* Tafkeek.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Tafkeek.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		242F52C017B4D3A585A2DF1F /* Tafkeek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tafkeek.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C890202AD0DDD08AF1E7196 /* Support.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Support.swift; sourceTree = "<group>"; };
 		56FDC38420736424E64573C1 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 		5AD44355BB4BCF87DAB74A94 /* TafkeekApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TafkeekApp.swift; sourceTree = "<group>"; };
@@ -212,7 +212,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = CBU7MJEC5R;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = Tafkeek/Info.plist;
@@ -236,7 +236,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = CBU7MJEC5R;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = Tafkeek/Info.plist;
