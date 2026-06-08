@@ -8,8 +8,18 @@
 
 const MODEL = 'gemini-3-pro-image-preview';
 
-const BASE_STYLE =
-  '. Clean, detailed technical educational illustration; soft colors; plain light background; scientifically accurate and faithful to how the real thing actually works; the relevant part must be the clear focal point; easy to understand at a glance. Absolutely NO text, NO letters, NO numbers, NO captions, NO labels anywhere in the image.';
+/** النمط البصري الموحّد — هوية واحدة لكل الصور لضمان جودة واتساق عاليين. */
+const STYLE_ANCHOR =
+  'Premium 3D educational illustration in a clean isometric cutaway style, similar to high-end Apple/textbook explainer graphics. Crisp vector-like surfaces, gentle ambient occlusion, soft diffused studio lighting, shallow depth of field on the focal part, harmonious muted color palette with one clear accent color, smooth gradients, plain light neutral background.';
+
+/** إرشادات سلبية صريحة — تمنع أخطاء الجودة الشائعة. */
+const NEGATIVE_CUES =
+  'Avoid: blurriness, distortion, deformed or missing parts, extra duplicated parts, cluttered busy composition, photorealistic uncanny or scary look, harsh shadows, watermark, frame or border.';
+
+const NO_TEXT =
+  'Absolutely NO text, NO letters, NO numbers, NO captions, NO labels anywhere in the image.';
+
+const BASE_STYLE = `. ${STYLE_ANCHOR} Scientifically accurate and faithful to how the real thing actually works; the relevant part must be the clear focal point; easy to understand at a glance. ${NEGATIVE_CUES} ${NO_TEXT}`;
 
 type GeminiPart =
   | { text: string }
@@ -25,6 +35,8 @@ function parseDataUrl(
 export async function generateIllustration(
   prompt: string,
   reference?: string,
+  /** سياق علمي مختصر للمرحلة (مثلاً الـ detail العربي) لتوجيه دقة الصورة. */
+  context?: string,
 ): Promise<string> {
   const key = process.env.GEMINI_API_KEY;
   if (!key) throw new Error('GEMINI_API_KEY غير مضبوط');
@@ -43,6 +55,12 @@ export async function generateIllustration(
         prompt;
     }
   }
+
+  // حقن السياق العلمي للمرحلة ليفهم النموذج "العلم" لا الشكل فقط.
+  if (context && context.trim()) {
+    text += `\n\nScientific context of what is happening in this stage (depict it faithfully): ${context.trim()}`;
+  }
+
   parts.push({ text: text + BASE_STYLE });
 
   const res = await fetch(
@@ -52,7 +70,11 @@ export async function generateIllustration(
       headers: { 'x-goog-api-key': key, 'Content-Type': 'application/json' },
       body: JSON.stringify({
         contents: [{ parts }],
-        generationConfig: { responseModalities: ['IMAGE'] },
+        generationConfig: {
+          responseModalities: ['IMAGE'],
+          // تأطير أفقي مناسب للرسوم التوضيحية وجودة أعلى.
+          imageConfig: { aspectRatio: '4:3' },
+        },
       }),
     },
   );

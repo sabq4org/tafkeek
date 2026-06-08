@@ -36,7 +36,11 @@ export function ExplanationView({ explanation, onSelectRelated }: Props) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           subject: explanation.subject,
-          steps: steps.map((s) => ({ order: s.order, visual: s.visual })),
+          steps: steps.map((s) => ({
+            order: s.order,
+            visual: s.visual,
+            detail: s.detail,
+          })),
         }),
       });
       if (!res.ok) throw new Error('تعذّر توليد الرسوم، حاول مرة أخرى.');
